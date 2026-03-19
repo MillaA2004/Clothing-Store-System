@@ -47,10 +47,11 @@ namespace Clothes
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Linen;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(10);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 48);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 400);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(617, 492);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
@@ -61,13 +62,13 @@ namespace Clothes
             this.button1.BackColor = System.Drawing.Color.Linen;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button1.Location = new System.Drawing.Point(550, 50);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 10, 25, 10);
-            this.button1.MaximumSize = new System.Drawing.Size(200, 40);
+            this.button1.Location = new System.Drawing.Point(733, 62);
+            this.button1.Margin = new System.Windows.Forms.Padding(0, 12, 33, 12);
+            this.button1.MaximumSize = new System.Drawing.Size(267, 49);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 40);
+            this.button1.Size = new System.Drawing.Size(267, 49);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Sort by Type";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -79,13 +80,13 @@ namespace Clothes
             this.button2.BackColor = System.Drawing.Color.Linen;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button2.Location = new System.Drawing.Point(550, 100);
-            this.button2.Margin = new System.Windows.Forms.Padding(0, 10, 25, 10);
-            this.button2.MaximumSize = new System.Drawing.Size(200, 40);
+            this.button2.Location = new System.Drawing.Point(733, 123);
+            this.button2.Margin = new System.Windows.Forms.Padding(0, 12, 33, 12);
+            this.button2.MaximumSize = new System.Drawing.Size(267, 49);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 40);
+            this.button2.Size = new System.Drawing.Size(267, 49);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
+            this.button2.Text = "Sort by Date";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -97,13 +98,13 @@ namespace Clothes
             this.button3.BackColor = System.Drawing.Color.Linen;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button3.Location = new System.Drawing.Point(550, 150);
-            this.button3.Margin = new System.Windows.Forms.Padding(0, 10, 25, 10);
-            this.button3.MaximumSize = new System.Drawing.Size(200, 40);
+            this.button3.Location = new System.Drawing.Point(733, 185);
+            this.button3.Margin = new System.Windows.Forms.Padding(0, 12, 33, 12);
+            this.button3.MaximumSize = new System.Drawing.Size(267, 49);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 40);
+            this.button3.Size = new System.Drawing.Size(267, 49);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "Newest First";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -115,13 +116,13 @@ namespace Clothes
             this.button4.BackColor = System.Drawing.Color.Linen;
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button4.Location = new System.Drawing.Point(550, 200);
-            this.button4.Margin = new System.Windows.Forms.Padding(0, 10, 25, 10);
-            this.button4.MaximumSize = new System.Drawing.Size(200, 40);
+            this.button4.Location = new System.Drawing.Point(733, 246);
+            this.button4.Margin = new System.Windows.Forms.Padding(0, 12, 33, 12);
+            this.button4.MaximumSize = new System.Drawing.Size(267, 49);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 40);
+            this.button4.Size = new System.Drawing.Size(267, 49);
             this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
+            this.button4.Text = "Menswear";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -133,13 +134,13 @@ namespace Clothes
             this.button5.BackColor = System.Drawing.Color.Linen;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button5.Location = new System.Drawing.Point(550, 250);
-            this.button5.Margin = new System.Windows.Forms.Padding(0, 10, 25, 10);
-            this.button5.MaximumSize = new System.Drawing.Size(200, 40);
+            this.button5.Location = new System.Drawing.Point(733, 308);
+            this.button5.Margin = new System.Windows.Forms.Padding(0, 12, 33, 12);
+            this.button5.MaximumSize = new System.Drawing.Size(267, 49);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 40);
+            this.button5.Size = new System.Drawing.Size(267, 49);
             this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
+            this.button5.Text = "Womenswear";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -149,9 +150,10 @@ namespace Clothes
             this.button6.BackColor = System.Drawing.Color.Linen;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button6.Location = new System.Drawing.Point(657, 404);
+            this.button6.Location = new System.Drawing.Point(876, 497);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 45);
+            this.button6.Size = new System.Drawing.Size(153, 55);
             this.button6.TabIndex = 6;
             this.button6.Text = "Back";
             this.button6.UseVisualStyleBackColor = false;
@@ -162,18 +164,19 @@ namespace Clothes
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Location = new System.Drawing.Point(19, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 28);
+            this.label1.Size = new System.Drawing.Size(180, 37);
             this.label1.TabIndex = 7;
             this.label1.Text = "Our Products:";
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrange;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1045, 567);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -184,6 +187,7 @@ namespace Clothes
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.Color.SaddleBrown;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form3";
             this.Text = "Nina\'s Products";
             this.Load += new System.EventHandler(this.Form3_Load);

@@ -11,158 +11,72 @@ using System.Data.SqlClient;
 
 namespace Clothes
 {
+
     public partial class Form3 : Form
     {
+        private readonly string connString = @"Server=(localdb)\MSSQLLocalDB; Database=drehi; Trusted_Connection=True;";
+
         public Form3()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadData(string query)
         {
-            string connString = @"Server=(localdb)\MSSQLLocalDB; Database = drehi; Trusted_Connection = True;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
-                    string query = @"
-                               SELECT*
-                               FROM Products
-                               ORDER BY ProductType
-                               ";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
+
                     dAdapter.Fill(ds);
+
                     dataGridView1.ReadOnly = true;
                     dataGridView1.DataSource = ds.Tables[0];
-                    conn.Close();
+                    // Note: conn.Close() is not needed here because the 'using' block automatically closes it
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Exception: " + ex.Message);
+                MessageBox.Show("Database Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
-            label1.Text = "Списък на всички ";
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Products ORDER BY ProductType";
+            LoadData(query);
+            label1.Text = "List of all products sorted by type";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connString = @"Server=(localdb)\MSSQLLocalDB; Database = drehi; Trusted_Connection = True;";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    string query = @"
-                               SELECT*
-                               FROM Products
-                               ORDER BY DeliveryDate
-                               ";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    dAdapter.Fill(ds);
-                    dataGridView1.ReadOnly = true;
-                    dataGridView1.DataSource = ds.Tables[0];
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception: " + ex.Message);
-            }
-
-            label1.Text = "Списък на всички";
+            string query = "SELECT * FROM Products ORDER BY DeliveryDate";
+            LoadData(query);
+            label1.Text = "List of all products sorted by delivery date";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            string connString = @"Server=(localdb)\MSSQLLocalDB; Database = drehi; Trusted_Connection = True;";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    string query = @"
-                               SELECT*
-                               FROM Products
-                               ORDER BY ProductNumber DESC
-                               ";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    dAdapter.Fill(ds);
-                    dataGridView1.ReadOnly = true;
-                    dataGridView1.DataSource = ds.Tables[0];
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception: " + ex.Message);
-            }
-
-            label1.Text = "Списък на всички";
+            string query = "SELECT * FROM Products ORDER BY ProductNumber DESC";
+            LoadData(query);
+            label1.Text = "List of all products sorted by product number";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-            string connString = @"Server=(localdb)\MSSQLLocalDB; Database = drehi; Trusted_Connection = True;";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    string query = @"
-                               SELECT*
-                               FROM Products
-                               Where Gender='m'
-                               ";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    dAdapter.Fill(ds);
-                    dataGridView1.ReadOnly = true;
-                    dataGridView1.DataSource = ds.Tables[0];
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception: " + ex.Message);
-            }
-
-            label1.Text = "Списък на m";
+            string query = "SELECT * FROM Products WHERE Gender='m'";
+            LoadData(query);
+            label1.Text = "List of menswear products";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string connString = @"Server=(localdb)\MSSQLLocalDB; Database = drehi; Trusted_Connection = True;";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    string query = @"
-                               SELECT*
-                               FROM Products
-                               Where Gender='f'
-                               ";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    dAdapter.Fill(ds);
-                    dataGridView1.ReadOnly = true;
-                    dataGridView1.DataSource = ds.Tables[0];
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception: " + ex.Message);
-            }
-
-            label1.Text = "Списък на f";
+            string query = "SELECT * FROM Products WHERE Gender='f'";
+            LoadData(query);
+            label1.Text = "List of womenswear products";
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -174,10 +88,7 @@ namespace Clothes
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            button1_Click(this, EventArgs.Empty); 
         }
     }
 }
-
-
-
